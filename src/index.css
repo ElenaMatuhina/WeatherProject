@@ -1,13 +1,95 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+
+
+
+
+.search {
+  margin: 0 auto;
+  width: 414px;
+  height: 25px;
+  position: relative;
+  border: 1px solid #c7c7c7;
+  border-top: 1px solid #868686;
+  border-radius: 6px;
+}
+
+.input-search {
+  color: #888;
+  width: 375px;
+  float: left;
+  margin: 0 0 0 2px;
+  border: 0;
+  height: 100%;
+  line-height: 16px;
+  padding: 0 0 0 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.btn-search {
+  margin: 0;
+  padding: 0;
+  float: right;
+  border: medium none;
+  background: url(https://pogoda7.ru/templates/pogoda/images/search_3.gif);
+  width: 27px;
+  height: 25px;
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+.town-list {
+  list-style: none outside none;
+}
+
+li {
+  text-align: -webkit-match-parent;
+}
+
+.town {
+  line-height: 29px;
+  height: 29px;
+  width: 500px;
+  display: block;
+
+}
+
+.town-temp_image {
+  padding-left: 2px;
+  float: right;
+  
+}
+
+.town-temp {
+  color: #006390;
+  padding-left: 50px;
+  float: right;
+  font-size: 16px;
+  width: 37px;
+  text-align: right;
+}
+
+.town_image {
+  height: 150px;
+  width: 150px;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.head-weatherlist {
+  margin-bottom: 20px;
+}
+
