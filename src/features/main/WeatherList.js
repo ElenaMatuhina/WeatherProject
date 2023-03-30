@@ -1,15 +1,13 @@
 import { WeatherItem } from './WeatherItem';
 import { useLoadFirstPage } from '../../common/hooks/use-load-first-page';
 import { townList } from '../../common/const/townLists';
-import { UseSearch } from '../../common/hooks/use-search';
-import { WeatherListWrapper } from './style';
+import { WeatherListWrapper, WeatherTable } from './style';
 
 function WeatherList() {
   const towns = [];
   townList.map((item) => towns.push(item.id)).join(',');
 
   const tempTown = useLoadFirstPage(towns);
-  const [search, handlesearch, loadSearch, tempOneTown] = UseSearch();
 
   console.log(tempTown);
 
@@ -23,10 +21,12 @@ function WeatherList() {
 
   return (
     <WeatherListWrapper>
-      <h2>Погода в основных городах России</h2>
-      {townList.map((town) => (
-        <WeatherItem key={town.id} name={town.name} temp={town.temp} icon={town.icon} />
-      ))}
+      <h3 >Погода в основных городах России:</h3>
+      <WeatherTable>
+        {townList.map((town) => (
+          <WeatherItem key={town.id} name={town.name} temp={town.temp} icon={town.icon} />
+        ))}
+      </WeatherTable>
     </WeatherListWrapper>
   );
 }

@@ -5,14 +5,10 @@ import { ButtonNav, ButtonForecast, TodayWrapper } from './styles';
 import { WeatherListDays } from './WeatherListDays';
 import { useHidden } from '../../common/hooks/use-hidden';
 
-
 export const Details = () => {
   const { name } = useParams();
   const navigate = useNavigate();
   const [isHidden, handleHidden] = useHidden();
-
-
-
 
   if (!isHidden) {
     return (
@@ -26,6 +22,8 @@ export const Details = () => {
       </PageWrapper>
     );
   }
+
+  console.log(name);
 
   return (
     <PageWrapper>

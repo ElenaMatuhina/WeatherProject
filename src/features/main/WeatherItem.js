@@ -1,28 +1,24 @@
 import { ICON_URL } from '../../config';
-import {
-  WeatherTableWrapper,
-  WeatherTable,
-  WeatherItemTr,
-  ItemTown,
-  ItemTemp,
-  ItemIcon,
-} from './style';
+import { WeatherItemTemp, WeatherItemContainer, WeatherItemName } from './style';
+import { useNavigate } from 'react-router-dom';
 
 function WeatherItem({ name, temp, icon }) {
+  const navigate = useNavigate();
+  const changeNavName = (search) => {
+    navigate(`/town/${search}`);
+  };
+
   return (
-    <WeatherTableWrapper>
-      <WeatherTable>
-        <WeatherItemTr>
-          <ItemTown>{name}</ItemTown>
-          {temp && <ItemTemp>{temp.toFixed(0)}°</ItemTemp>}
-          <ItemIcon>
-            <img src={ICON_URL(icon)} className="temp-image" />
-          </ItemIcon>
-        </WeatherItemTr>
-      </WeatherTable>
-    </WeatherTableWrapper>
+    <>
+      <WeatherItemContainer onClick={() => changeNavName(name)}>
+        <WeatherItemName>{name}</WeatherItemName>
+      </WeatherItemContainer>
+      {temp && <WeatherItemTemp WeatherItemTemp>{temp.toFixed(0)}°</WeatherItemTemp>}
+      <WeatherItemContainer>
+        <img src={ICON_URL(icon)} />
+      </WeatherItemContainer>
+    </>
   );
 }
 
 export { WeatherItem };
-

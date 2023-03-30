@@ -9,7 +9,10 @@ function Search() {
 
   const changeNavName = (search) => {
     navigate(`/town/${search}`);
+
   };
+
+
 
   return (
     <div className="search">

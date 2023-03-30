@@ -5,6 +5,7 @@ import { MONTHNAMES } from '../../common/const/monthNames';
 export const WeatherNextDay = ({ date }) => {
   const day = date[0]?.date;
   const month = MONTHNAMES[date[0]?.month];
+  console.log(date);
 
   return (
     <Container>

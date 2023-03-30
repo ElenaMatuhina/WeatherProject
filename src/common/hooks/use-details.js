@@ -19,7 +19,7 @@ export const useDetails = (name) => {
     return () => {
       dispatch(clearSearch());
     };
-  }, [dispatch]);
+  }, [dispatch, name]);
 
   return [weatherData, status, error];
 };

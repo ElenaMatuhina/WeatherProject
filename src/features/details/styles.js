@@ -110,12 +110,15 @@ export const WrapperDayDetails = styled.div`
 `;
 
 export const WeatherDayDetails = styled.div`
-  display: flex;
-  height: 75px;
+  display: grid;
+  grid-template-columns: 50px 50px 50px 1fr 80px 150px 80px;
+  grid-template-rows: 75px;
+  column-gap: 0.5em;
+  width: 700px;
   line-height: 75px;
   border-bottom: 1px solid #dcdcdc;
 `;
 
 export const WeatherDayDetailsValue = styled.div`
-  padding: 5px 20px;
+  padding: 5px 2px;
 `;
